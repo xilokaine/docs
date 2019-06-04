@@ -1,0 +1,17 @@
+
+-- Consume with group ok1.
+kafka-console-consumer --bootstrap-server <hostname>:9146 --topic qd_topics --group ok1
+
+-- Display all groups which already connected.
+kafka-consumer-groups --bootstrap-server <hostname>:9146 --list
+ok1
+ops_kafka
+console-consumer-79811
+ok
+console-consumer-3369
+KafkaConsumerOmni4
+
+-- 
+kafka-consumer-groups --bootstrap-server <hostname>:9146 --group ok1 --describe
+
+kafka-consumer-groups --bootstrap-server <hostname>:9146 --group ok1 --topic qd_topics  --reset-offsets --to-earliest --execute
